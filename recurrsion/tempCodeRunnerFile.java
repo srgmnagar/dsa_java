@@ -1,0 +1,1 @@
+pattern1print(row,col+1);
