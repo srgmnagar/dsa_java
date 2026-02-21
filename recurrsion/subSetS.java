@@ -6,7 +6,7 @@ public class subSetS {
     public static void main(String[] args) {
         String str="abc";
         ArrayList<String> ans=substr("",str);
-        System.out.println(ans);
+        System.out.println(ans.size());
     }
     static ArrayList<String> substr(String p, String up){
         if(up.length()==0){
@@ -19,7 +19,7 @@ public class subSetS {
         for (int i = 0; i <= p.length(); i++) {
             String f=p.substring(0, i);
             String b=p.substring(i, p.length());
-            ans.addAll(substr(f+ch+b,up.substring(1)));
+            ans.addAll(substr(f+ch+b,up.substring(1 )));
         }
         return ans;
         }
