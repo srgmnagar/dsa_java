@@ -44,10 +44,57 @@ public class LL{
         }
         Node newnode=new Node(val, temp.next);
         temp.next=newnode;
+        size++;
     }
 
-    void deleteFirst(int val){
-        
+    public int deleteFirst(){
+        int val=head.val;
+        head=head.next;
+        if(head==null){
+            tail=null;
+        }
+        size--;
+        return val;
+    }
+    
+    public int deleteLast(){
+        int val;
+        if(size<=1){
+            val=head.val;
+            deleteFirst();
+            return val;
+        }
+        Node secondLast=get(size-2);
+        val=tail.val;
+        tail=secondLast;
+        tail.next=null;
+        size--;
+        return val;
+    }
+
+    public int deleteAtIndex(int index){
+        int val;
+        if(index==0){
+            val=deleteFirst();
+            return val;
+        }
+        if(index==size-1){
+            val=deleteLast();
+            return val;
+        }
+        Node node=get(index-1);
+        val=node.next.val;
+        node.next=node.next.next;
+        size--;
+        return val;
+    }
+
+    public Node get(int index){
+        Node node=head;
+        for(int i=0;i<index;i++){
+            node=node.next;
+        }
+        return node;
     }
 
     public void display(){
