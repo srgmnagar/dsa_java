@@ -1,9 +1,22 @@
-public class LL{
+
+public class SLL{
     private Node head;
     private Node tail;
     private int size;
 
-    public LL(){
+     private class Node{
+        private int val;
+        private Node next;
+        public Node(int val){
+            this.val=val;
+        }
+        public Node(int val, Node next){
+            this.val=val;
+            this.next=next;   
+        }
+    }
+
+    public SLL(){
         this.size=0;
     }
 
@@ -106,16 +119,6 @@ public class LL{
         System.out.println("NULL");
     }
 
-    private class Node{
-        private int val;
-        private Node next;
-        public Node(int val){
-            this.val=val;
-        }
-        public Node(int val, Node next){
-            this.val=val;
-            this.next=next;   
-        }
-    }
+   
 
 }

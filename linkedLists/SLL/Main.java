@@ -1,6 +1,7 @@
+
 public class Main {
     public static void main(String[] args) {
-        LL list =new LL();
+        SLL list =new SLL();
         list.insertFirst(44);
         list.insertFirst(49);
         list.insertFirst(88);
