@@ -8,9 +8,10 @@ public class Main {
         list.insertFirst(94);
         list.insertLast(100);
         list.insertAtIndex(11, 2);
-        System.out.println(list.deleteFirst());
-        System.out.println(list.deleteLast());
-        System.out.println(list.deleteAtIndex(1));
+        list.insertRec(6,10000);
+        // System.out.println(list.deleteFirst());
+        // System.out.println(list.deleteLast());
+        // System.out.println(list.deleteAtIndex(1));
         list.display();
     }
 }

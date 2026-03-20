@@ -7,7 +7,10 @@ public class main {
         list.insertFirst(9);
         list.insertFirst(10);
         list.insertFirst(11);
+        list.insertLast(34);
+        list.insertAtIndex(2,44);
         list.display();
-        list.displayReverse();
+    
+        // list.displayReverse();
     }
 }

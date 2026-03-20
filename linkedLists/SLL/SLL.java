@@ -110,6 +110,21 @@ public class SLL{
         return node;
     }
 
+    public void insertRec(int index,int val){
+        head=rec(head,index,val);
+    }
+
+    private Node rec(Node node,int index, int val){
+        if(index==0){
+            Node newnode=new Node(val);
+            newnode.next=node;
+            size++;
+            return newnode;
+        }
+        node.next=rec(node.next,--index,val);
+        return node;
+    }
+
     public void display(){
         Node temp =head;
         while(temp!=null){
