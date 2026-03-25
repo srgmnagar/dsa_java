@@ -110,6 +110,46 @@ public class SLL{
         return node;
     }
 
+    public void bubble(){
+        bubbleSort(size-1, 0);
+    }
+
+    private void bubbleSort(int row, int col){
+        if(row==0){
+            return;
+        }
+        else if(col<row){
+            Node first=get(col);
+            Node sec=get(col+1);
+            if(first.val>sec.val){
+                if(first==head){
+                    head=sec;
+                    first.next=sec.next;
+                    sec.next=first;
+                }
+                else if(sec==tail){
+                    Node prev=get(col-1);
+                    prev.next=sec;
+                    tail=first;
+                    sec.next=first;
+                    first.next=null;
+                }
+                else{
+                    Node prev=get(col-1);
+                    first.next=sec.next;
+                    sec.next=first;
+                    prev.next=sec;
+                }
+            }
+            bubbleSort(row, col+1);
+
+            }
+            else{
+                bubbleSort(row-1, 0);
+            }
+        }   
+       
+
     public void insertRec(int index,int val){
         head=rec(head,index,val);
     }
