@@ -11,5 +11,6 @@ public class stackMain {
         System.out.println(stack.pop());
         System.out.println(stack.pop());
         // System.out.println(stack.pop());
+        //game of 2 stacks - hackerrank - https://www.hackerrank.com/challenges/game-of-two-stacks/problem
     }
 }
